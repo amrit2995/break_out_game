@@ -44,15 +44,15 @@ while game_on:
     if ball.xcor() < -380 or ball.xcor() > 380:
         ball.reflect_ball_x()
 
-    if ball.ycor() > 280:
+    if ball.ycor() > 250:
         ball.reflect_ball_y()
 
     if ball.ycor() < -280:
+        # ball.reflect_ball_y()
         scoreboard.life_update()
         game_on = game.notice(scoreboard.life, scoreboard.score)
         ball.reset()
         player.reset()
-
 
     if ball.ycor() < -230 and ball.distance(player) < 80:
         ball.reflect_ball_y()
